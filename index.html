@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class=" bg-color-primary text-color-white tracking-wider">
- <header>
+ <header class="sticky top-0 z-50">
   <nav class="container flex justify-between items-center">
     <div class="py-5 text-color-secondary font-bold text-3xl">
       <a href="#home">
@@ -30,9 +30,12 @@
           <a href="#donate" class="hover:text-color-secondary ease-in duration-200">How to Donate</a>
         </li>
         <li>
-          <a href="#home" class="hover:text-color-secondary ease-in duration-200">The Team</a>
+          <a href="#team" class="hover:text-color-secondary ease-in duration-200">The Team</a>
         </li>
-        <li><button class="btn">Sign Up</button></li>
+        <li>
+          <a href="#news" class="hover:text-color-secondary ease-in duration-200">News & Guide</a>
+        </li>
+        <li><a href="#signup" class="btn">Sign Up</a></li>
       </ul>
     </div>
 
@@ -56,8 +59,11 @@
         </li>
         <li>
           <a id="hLinK" href="#team" class="hover:text-color-secondary ease-in duration-200">The Team</a>
+        </li>        
+        <li>
+          <a id="hLinK" href="#news" class="hover:text-color-secondary ease-in duration-200">News & Guide </a>
         </li>
-        <li><button class="btn">Sign Up</button></li>
+        <li><a class="btn" href="#signup">Sign Up</a></li>
       </ul>
     </div>
   </nav>
@@ -136,30 +142,23 @@
         </div>
     </section>
     <section id="download">
-      <div class="container py-20 relative">
-          <div class="flex flex-col items-center justify-between md:flex-row">
-            <div class="mb-12 md:w-1/2">
-              <img src="./img/download.png" alt="Download Now">
-            </div>
-
-            <div class="text-center md:text-left md:w-1/2 md:ml-20">
-              <h4 class="font-bold text-color-secondary mb-4">Download Links</h4>
-              <h1 class="title mb-4">Download and Enjoy our classic gameplay style ran online!!!</h1>
-             
-                <ul class="list-none">
-                  <li>
-                    <a class=" hover:text-color-secondary ease-in duration-100" href="#"><span class="fa-solid fa-download"></span> Google Drive</a>
-                  </li>
-                  <li class="mt-4">
-                    <a class=" hover:text-color-secondary ease-in duration-100" href="#"><span class="fa-solid fa-download"></span> Mega Upload</a>
-                  </li>
-                  <li class="mt-4">
-                    <a class=" hover:text-color-secondary ease-in duration-100" href="#"><span class="fa-solid fa-download"></span> Media Fire</a>
-                  </li>
-                </ul>
-             
-            </div>
+      <div class="container h-[80vh] grid place-items-center">
+        <div class="text-center md:w-2/3 m-auto">
+          <h1 class="title">Download Now</h1>
+          <p class="leading-relaxed pt-5">Download and Enjoy our classic gameplay style ran online!!!           
+          </p>
+          <div class="flex flex-col md:flex-row items-center justify-center gap-5 pt-10">
+            <a href="" class="bg-color-white h-16 w-16 grid place-items-center rounded-lg hover:opacity-70">
+              <img src="./img/gdrive.png" alt="">
+            </a>
+            <a href="" class="bg-color-white h-16 w-16 grid place-items-center rounded-lg hover:opacity-70">
+              <img src="./img/mfire.png" alt="">
+            </a>
+            <a href="" class="bg-color-white h-16 w-16 grid place-items-center rounded-lg hover:opacity-70">
+              <img src="./img/m.png" alt="">
+            </a>
           </div>
+        </div>
       </div>
     </section>
     <section id="donate" class="bg-color-primary">
@@ -199,44 +198,288 @@
     </div>
     </section>
     <section id="team">
-      <div class="container py-20">
+      <div class="container py-36">
         <div class="text-center m-auto mb-20 md:w-1/2">
           <h4 class="font-bold text-color-secondary mb-4">The Team</h4>
           <h1 class="title">Agila Ran Online TEAM</h1>
         </div>
 
-        <div class="grid lg:grid-rows-1 md:grid-rows-1 gap-12 lg:gap-8 px-4 sm:px-6 lg:px-8">
-            <!-- card no 1 -->
-            <div class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer ">
-              <div class="flex flex-col items-center justify-center md:flex-row ">
-                <div class="mb-12 md:w-1/4 rounded-full">
-                  <img src="./img/download.png" alt="Download Now">
-                </div>
-      
-                <div class="text-center md:text-left md:w-1/2 md:ml-20">
-                  <h4 class="animate-bounce w-6 h-6 font-bold text-color-secondary mb-4">Admin</h4>
-                  <h1 class="title mb-4">Specialize Event and CUSTOMER SERVICE</h1>
-                </div>
+        <!--TEAM COINTAINER-->
+
+        <div class="mt-8">
+          <div class="flex items-center justify-center flex-wrap">
+            <img src="./img/user1.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic active-pic transition-all hover:scale-125 duration-200" onclick="showReview();">
+            <img src="./img/user2.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic transition-all hover:scale-125 duration-200" onclick="showReview();">
+            <img src="./img/user3.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic transition-all hover:scale-125 duration-200" onclick="showReview();">
+            <img src="./img/user4.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic transition-all hover:scale-125 duration-200" onclick="showReview();">
+            <img src="./img/user5.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic transition-all hover:scale-125 duration-200" onclick="showReview();">
+          </div>
+          <div class="grid place-items-center text-center m-auto md:w-4/5 min-h-[40vh]">
+            <div class="user-text active-text">
+              <p class="md:text-2xl mb-6">"1This person is responsible for the economic strategies of the game"</p>
+              <h4 class="font-bold text-color-secondary mb-1">Adie</h4>
+              <p>ECONOMIC PERSON</p>
+            </div>
+            <div class="user-text">
+              <p class="md:text-2xl mb-6">"2This person is responsible for the economic strategies of the game"</p>
+              <h4 class="font-bold text-color-secondary mb-1">Arjay</h4>
+              <p>ECONOMIC PERSON</p>
+            </div>
+            <div class="user-text">
+              <p class="md:text-2xl mb-6">"3This person is responsible for the economic strategies of the game"</p>
+              <h4 class="font-bold text-color-secondary mb-1">Kyudo</h4>
+              <p>ECONOMIC PERSON</p>
+            </div>
+            <div class="user-text">
+              <p class="md:text-2xl mb-6">"4This person is responsible for the economic strategies of the game"</p>
+              <h4 class="font-bold text-color-secondary mb-1">Anthony</h4>
+              <p>ECONOMIC PERSON</p>
+            </div>
+            <div class="user-text">
+              <p class="md:text-2xl mb-6">"5This person is responsible for the economic strategies of the game"</p>
+              <h4 class="font-bold text-color-secondary mb-1">Ejohn</h4>
+              <p>ECONOMIC PERSON</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="signup">
+      <div class="container py-20">
+        <div class="text-center m-auto mb-20 md:w-1/2">
+          <h4 class="font-bold text-color-secondary mb-4 login">Sign In</h4>
+          <h1 class="title">Dont have account ? Register Now !!!</h1>
+
+
+          <!-- Rounded switch  -->
+          <div class="mt-5 flex items-center justify-center gap-4">
+              <p>Sign In</p>
+              <label class="cursor-pointer relative inline-block w-20 h-8 rounded-full">
+                  <input type="checkbox" id="toggleBtn" class="peer opacity-0 w-0 h-0" onclick="btnLogin();">
+                  <span class="absolute top-0 left-0 right-0 bottom-0 bg-color-primary border border-solid border-color-gray rounded-full duration-300 before:content-[''] before:absolute before:w-6 before:h-6 before:bottom-1 before:left-1 before:rounded-full before:bg-color-white before:duration-300 peer-checked:before:translate-x-12 peer-checked:bg-color-secondary"></span>
+              </label>
+              <p>Sign Up</p>
+          </div>
+      </div>
+        <div class="flex justify-center items-center h-100">
+          <!--Card 1-->
+          <div class="card relative h-auto w-auto">
+            <!--Front Side-->
+            <div id="card_1_front" class="front px-7 py-11 rounded-2xl border-2 border-solid border-color-gray h-full w-full">
+              <div class="relative">
+                <h1 class="title mb-14 text-color-secondary text-center">Sign In</h1>
+                <form class="bg-transparent shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                  <div class="mb-4">
+                    <label class="block text-color-white text-sm font-bold mb-2" for="username">
+                      Username
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+                  </div>
+                  <div class="mb-6">
+                    <label class="block text-color-white text-sm font-bold mb-2" for="password">
+                      Password
+                    </label>
+                    <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
+                    
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <button class="btn" type="button">
+                      Sign In
+                    </button>
+                    <a class="inline-block align-baseline font-bold text-sm text-color-white hover:text-color-secondary " href="#">
+                      Forgot Password?
+                    </a>
+                  </div>
+                </form>
               </div>
             </div>
-              <!-- card no 2 -->
-              <div class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer ">
-                <div class="flex flex-col items-center justify-center md:flex-row ">
-                  <div class="text-center md:text-right md:w-1/2 md:ml-20">
-                    <h4 class="animate-bounce font-bold text-color-secondary mb-4">Admin</h4>
-                    <h1 class="title mb-4">Specialize Event and CUSTOMER SERVICE</h1>
-                  </div>
-                  <div class="mb-12 md:w-1/4 rounded-full">
-                    <img src="./img/download.png" alt="Download Now">
-                  </div>     
+            <!--back Side-->
+            <div id="card_1_back" class="back rotate-y-180 px-7 py-11 rounded-2xl border-2 border-solid border-color-gray h-full w-full absolute top-0 left-0">
+              <form>
+                <h1 class="title mb-14 text-color-secondary text-center">Sign Up</h1>
+                <div class="mb-4">
+                  <label for="username" class="block text-sm font-medium text-color-white">Username</label>
+                  <input type="text" id="username" name="username" class="mt-1 px-3 py-2 w-full border rounded-md text-gray-700">
                 </div>
-              </div>
+                <div class="mb-4">
+                  <label for="email" class="block text-sm font-medium text-color-white">Email</label>
+                  <input type="email" id="email" name="email" class="mt-1 px-3 py-2 w-full border rounded-md text-gray-700" required>
+                </div>
+                <div class="mb-4">
+                  <label for="password" class="block text-sm font-medium text-color-white">Password</label>
+                  <input type="password" id="password" name="password" class="mt-1 px-3 py-2 w-full border rounded-md text-gray-700">
+                </div>
+                <div class="mb-40">
+                  <label class="inline-flex items-center">
+                    <input type="checkbox" class="text-color-white rounded border-gray-300 mr-2">
+                    <span class="text-gray-700 text-sm ">I agree to the terms and privacy policy</span>
+                  </label>
+                  <button type="submit" class="w-full btn mt-5">Register</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+    <section id ="news">
+      <div class="container py-20">
+        <div class="text-center m-auto mb-20 md:w-1/2">
+            <h4 class="font-bold text-color-secondary mb-4">News and Update</h4>
+            <h1 class="title">Latest Updates and news about Agila Ran</h1>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <!-- card no 1 -->
+      <div>
+          <div class="lg:h-[40vh] rounded-xl scale-100 overflow-hidden">
+              <img src="./img/agila.png" alt="" class="lg:h-full w-full hover:scale-125 transition duration-300 ease-in-out">
+          </div>
+
+          <div>
+              <div class="flex items-center gap-5 py-5">
+                  <p>20 August 2022</p>
+                  <p>1 min read</p>
+              </div>
+
+              <a href="#news" class="text-2xl font-bold underline hover:text-color-secondary hover:no-underline">New Weapon added with a awesome skill effect!</a>
+
+              <p class="leading-relaxed my-5">This is the latest imortal weapon in game that you can purchase via premium points......</p>
+
+
+              <a href="#news" class="inline-block font-bold hover:text-color-secondary transition-all duration-300 ease-in-out">
+                  <span class="tracking-wider capitalize underline hover:no-underline">Read more</span>
+              </a>
+          </div>
+      </div>
+
+      <!-- card no 2 -->
+      <div>
+        <div class="lg:h-[40vh] rounded-xl scale-100 overflow-hidden">
+            <img src="./img/agila.png" alt="" class="lg:h-full w-full hover:scale-125 transition duration-300 ease-in-out">
+        </div>
+
+        <div>
+            <div class="flex items-center gap-5 py-5">
+                <p>20 August 2022</p>
+                <p>1 min read</p>
+            </div>
+
+            <a href="#news" class="text-2xl font-bold underline hover:text-color-secondary hover:no-underline">New Weapon added with a awesome skill effect!</a>
+
+            <p class="leading-relaxed my-5">This is the latest imortal weapon in game that you can purchase via premium points......</p>
+
+
+            <a href="#news" class="inline-block font-bold hover:text-color-secondary transition-all duration-300 ease-in-out">
+                <span class="tracking-wider capitalize underline hover:no-underline">Read more</span>
+            </a>
+          </div>
+      </div>
+      <!-- card no 3 -->
+      <div>
+        <div class="lg:h-[40vh] rounded-xl scale-100 overflow-hidden">
+            <img src="./img/agila.png" alt="" class="lg:h-full w-full hover:scale-125 transition duration-300 ease-in-out">
+        </div>
+
+        <div>
+            <div class="flex items-center gap-5 py-5">
+                <p>20 August 2022</p>
+                <p>1 min read</p>
+            </div>
+
+            <a href="#news" class="text-2xl font-bold underline hover:text-color-secondary hover:no-underline">New Weapon added with a awesome skill effect!</a>
+
+            <p class="leading-relaxed my-5">This is the latest imortal weapon in game that you can purchase via premium points......</p>
+
+
+            <a href="#news" class="inline-block font-bold hover:text-color-secondary transition-all duration-300 ease-in-out">
+                <span class="tracking-wider capitalize underline hover:no-underline">Read more</span>
+            </a>
+            </div>
+        </div>
+      </div>
     </div>
+    </section>
+
+    <section id="footer">
+      
+      <div class="bg-gray-600">
+        <div class="container py-10">
+          <div class="grid gap-10 md:grid-cols-3 pb-10">
+            <div class="space-y-6">
+              <h4 class="font-bold text-lg">About Us</h4>
+              <p class="leading-relaxed">Agila Ran Online is an MMORPG game focused on bringing back the nostalgia feels of the famous ran online itself.
+              </p>
+              <div class="flex gap-5 items-center">
+                <p>Follow Us</p>
+                  <i class="fa-brands fa-facebook-f cursor-pointer hover:text-color-secondary">
+                  </i>
+                  <i class="fa-brands fa-twitter cursor-pointer hover:text-color-secondary">
+                  </i>
+                  <i class="fa-brands fa-youtube cursor-pointer hover:text-color-secondary">
+                  </i>
+                  <i class="fa-brands fa-instagram cursor-pointer hover:text-color-secondary">
+                  </i>
+              </div>
+            </div>
+            <div class="flex justify-between md:justify-around">
+              <div class="space-y-6">
+                <h4 class="font-bold text-large">Quick Links</h4>
+                <ul class="space-y-3">
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Home</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#feature">Server Features</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#download">Donwload Links</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#donate">How To Donate</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#team">The Team</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#news">News & Guide</a></li>
+
+                </ul>
+              </div>
+              <div class="space-y-6">
+                <h4 class="font-bold text-large">Help</h4>
+                <ul class="space-y-3">
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">About Us</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#feature">Server Partner</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#download">Help</a></li>                
+                </ul>
+              </div>
+            </div>
+            <div class="space-y-6">
+              <h4 class="font-bold text-lg">Newsletter</h4>
+              <p class="leading-relaxed">Subscribe to keep updated on our updates / news
+              </p>
+              <div class="flex items-center">
+                <input type="text" class="w-3/4 text-color-primary bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none" placeholder="Enter Your Email">
+                <button type="submit" class="bg-color-secondary px-4 py-2 lg:px-5 lg:py-3 rounded-r-md hover:opacity-90">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center pt-10 border-t border-color-gray">
+            <p>2023 &copy; KSYN. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
     </section>
  </main>
 
  <script>
+
+  const navbar = document.querySelector('header');
+  window.onscroll = () => {
+    if(window.scrollY > 100){
+      navbar.classList.add('bg-color-primary');
+      navbar.classList.add('border-b');
+      navbar.classList.add('border-color-gray');
+    }else{
+      navbar.classList.remove('bg-color-primary-dark');
+      navbar.classList.remove('border-b');
+      navbar.classList.remove('border-color-gray');
+    }
+  }
+
   // Mobile menu
   const hamburger = document.querySelector('#hamburger');
         const menu = document.querySelector('#menu');
@@ -257,6 +500,59 @@
                 faSolid.classList.toggle('fa-xmark');
             })
         })
- </script>
+
+     
+
+    // Team
+    const userTexts = document.getElementsByClassName('user-text');
+    const userPics = document.getElementsByClassName('user-pic');
+
+    function showReview(){
+      for(userPic of userPics){
+        userPic.classList.remove("active-pic");
+      }
+      for(userText of userTexts){
+        userText.classList.remove("active-text");
+      }
+
+      let i = Array.from(userPics).indexOf(event.target);
+
+      userPics[i].classList.add('active-pic');
+      userTexts[i].classList.add('active-text');
+
+
+    }
+
+    // Login
+
+    function btnLogin(){
+      const textSign = document.querySelector('.login');
+      if(textSign.innerText ==='Sign In'){
+        textSign.innerText = 'Sign Up';
+      }else{
+        textSign.innerText = 'Sign In'
+      }
+    }
+
+    const toggleBtn = document.getElementById('toggleBtn');
+
+    const card_1_front =document.querySelector("#card_1_front");
+    const card_1_back =document.querySelector("#card_1_back");
+
+    toggleBtn.addEventListener('change', () =>{
+      card_1_front.classList.toggle('-rotate-y-180');
+      card_1_back.classList.toggle('rotate-y-180');
+    })
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+    </script>
 </body>
 </html>
