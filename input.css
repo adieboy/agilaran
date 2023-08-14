@@ -56,3 +56,16 @@
 .front {
   overflow: hidden;
 }
+
+.container {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: popUpContainer 1s ease-out forwards;
+}
+
+@keyframes popUpContainer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

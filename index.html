@@ -2,7 +2,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <title>Agila Ran Online</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -83,7 +84,7 @@
                 </div>
 
                 <div class="md:w-1/2">
-                  <img  src="./img/logo.png" alt="Logo">
+                  <img  src="./img/logo.png" class="transition-all hover:scale-125 ease-in-out duration-1000" alt="Logo">
                 </div>
             </div>
         </div>
@@ -543,6 +544,14 @@
       });
     });
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".container");
+  container.style.animation = "none";
+  setTimeout(() => {
+    container.style.animation = null;
+  }, 100);
+});
     </script>
 </body>
 </html>
